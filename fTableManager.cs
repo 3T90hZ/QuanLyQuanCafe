@@ -250,7 +250,7 @@ namespace QuanLyQuanCafe
                 double finalTotalPrice = totalPrice - totalPrice * discount / 100;
                 if (idBill != -1)
                 {
-                    if (MessageBox.Show(string.Format("Thanh toán hóa đơn {0}? \n Tổng tiền - (Tổng tiền / 100) x Giảm giá = {1} - {1} x {2} / 100 = {3}", table.ID, totalPrice, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                    if (MessageBox.Show(string.Format("Thanh toán hóa đơn bàn {0}? \n Tổng tiền - (Tổng tiền / 100) x Giảm giá = {1} - {1} x {2} / 100 = {3}", table.ID, totalPrice, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                     {
                         BillDAO.Instance.CheckOut(idBill, discount,(float)finalTotalPrice, loginAccount.UserName);
                         showBill(table.ID);

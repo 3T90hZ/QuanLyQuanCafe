@@ -504,7 +504,7 @@ namespace QuanLyQuanCafe
 
         private void btnDeleteCategory_Click(object sender, EventArgs e)
         {
-                if (MessageBox.Show("Bạn có chắc muốn xóa danh muc " + txbCategoryName.Text + " nay?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Bạn có chắc muốn xóa danh mục " + txbCategoryName.Text + " nay?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     int id = Convert.ToInt32(txbCategoryID.Text);
                     if (CategoryDAO.Instance.DeleteCategory(id))
